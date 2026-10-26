@@ -297,14 +297,12 @@ a {
     border-radius: 12px;
     display: block;
 }
-/* SEÇÃO DE NOTÍCIAS */
 .noticias {
     background: #168ed0;
     padding: 40px 5%;
     overflow: hidden;
 }
 
-/* TÍTULO */
 .noticias h2 {
     color: white;
     font-family: 'Roboto', sans-serif;
@@ -312,7 +310,6 @@ a {
     margin-bottom: 80px;
 }
 
-/* LISTA DE CARDS */
 .lista-noticias {
     display: grid;
     grid-template-columns: repeat(5, minmax(0, 1fr));
@@ -320,12 +317,10 @@ a {
     align-items: start;
 }
 
-/* CADA NOTÍCIA */
 .noticia {
     min-width: 0;
 }
 
-/* IMAGENS */
 .noticia img {
     width: 100%;
     height: 230px;
@@ -334,7 +329,7 @@ a {
     display: block;
 }
 
-/* DATA */
+
 .noticia .data {
     color: #8ca8d5;
     font-family: 'Roboto', sans-serif;
@@ -343,7 +338,6 @@ a {
     margin-bottom: 10px;
 }
 
-/* TÍTULO DA NOTÍCIA */
 .noticia h3 {
     color: #07549b;
     font-family: 'Roboto', sans-serif;
@@ -352,7 +346,6 @@ a {
     margin: 0;
 }
 
-/* BOTÃO MAIS NOTÍCIAS */
 .botao-noticias {
     display: block;
     width: 45%;
@@ -429,139 +422,82 @@ footer {
     font-size: 13px;
 }
 
-
-@media (max-width: 768px) {
-    .cabecalho {
+@media (max-width: 992px) {
+    .barra-superior {
         justify-content: center;
+        gap: 10px;
+        text-align: center;
     }
 
-    .cabecalho nav {
+    .links-esquerda,
+    .links-direita {
+        justify-content: center;
         gap: 15px;
     }
 
-    .banner {
-        height: 250px;
-    }
-
-    .banner-slide {
-        padding: 25px 6%;
-    }
-
-    .banner-conteudo h2 {
-        font-size: 25px;
-    }
-
-    .banner-conteudo p {
-        font-size: 15px;
+    .cabecalho {
+        flex-direction: column;
+        text-align: center;
     }
 
     .cards {
-        grid-template-columns: 1fr;
-        gap: 18px;
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    .card {
-        min-height: 220px;
-    }
-
-    .solucoes {
-        margin-top: 0;
-        padding-top: 50px;
+    .lista-noticias {
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .banner-secundario {
         flex-direction: column;
-    }
-
-    .banner-sec-texto {
-        padding: 30px 25px;
+        text-align: center;
     }
 
     .banner-secundario img {
         width: 100%;
-        height: 220px;
+        max-height: 300px;
+    }
+}
+@media (max-width: 600px) {
+    .pesquisa {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pesquisa input {
+        width: 100%;
+    }
+
+    .pesquisa button {
+        width: 100%;
+        padding: 12px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
     }
 
     .destaques-lista {
         grid-template-columns: 1fr;
-        padding: 0;
     }
 
-    .noticias-lista {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 25px 15px;
+    .lista-noticias {
+        grid-template-columns: 1fr;
     }
 
     .contato {
         flex-direction: column;
-        gap: 25px;
+        text-align: center;
+        width: 95%;
+        padding: 20px;
     }
 
     .contato img {
         width: 100%;
-        max-width: 100%;
+        height: auto;
     }
 
-    .contato-texto {
-        width: 100%;
-    }
-}
-
-@media (max-width: 420px) {
-    .topo-links {
-        gap: 12px;
-    }
-
-    .topo-links a {
-        font-size: 10px;
-    }
-
-    .cabecalho nav a {
-        font-size: 10px;
-    }
-
-    .pesquisa {
-        padding: 10px;
-    }
-
-    .pesquisa input {
-        width: 70%;
-    }
-
-    .pesquisa button {
-        padding: 0 12px;
-        font-size: 11px;
-    }
-
-    .banner {
-        height: 230px;
-    }
-
-    .banner-conteudo h2 {
-        font-size: 21px;
-    }
-
-    .banner-conteudo p {
-        font-size: 13px;
-    }
-
-    .introducao h2 {
-        font-size: 22px;
-    }
-
-    .noticias-lista {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .noticia img {
-        height: 110px;
-    }
-
-    .noticia h3 {
-        font-size: 12px;
-    }
-
-    .contato {
-        padding: 20px;
+    .botao-noticias {
+        width: 80%;
     }
 }
